@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		9C02331A2258992400D347CC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0233192258992400D347CC /* AppDelegate.swift */; };
-		9C02331C2258992400D347CC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02331B2258992400D347CC /* ViewController.swift */; };
-		9C02331F2258992400D347CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C02331D2258992400D347CC /* Main.storyboard */; };
 		9C0233212258992500D347CC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9C0233202258992500D347CC /* Assets.xcassets */; };
 		9C0233242258992500D347CC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C0233222258992500D347CC /* LaunchScreen.storyboard */; };
 		9C02332F2258992500D347CC /* ToDoList__MVVM_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02332E2258992500D347CC /* ToDoList__MVVM_Tests.swift */; };
 		9C02333A2258992500D347CC /* ToDoList__MVVM_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0233392258992500D347CC /* ToDoList__MVVM_UITests.swift */; };
+		9C0233512258994700D347CC /* ToDoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0233482258994600D347CC /* ToDoViewController.swift */; };
+		9C0233522258994700D347CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9C02334A2258994600D347CC /* Main.storyboard */; };
+		9C0233532258994700D347CC /* ToDoItemTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C02334D2258994600D347CC /* ToDoItemTableViewCell.swift */; };
+		9C0233542258994700D347CC /* ToDoItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9C02334E2258994600D347CC /* ToDoItemTableViewCell.xib */; };
+		9C0233552258994700D347CC /* ToDoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C0233502258994600D347CC /* ToDoViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +39,6 @@
 /* Begin PBXFileReference section */
 		9C0233162258992400D347CC /* ToDoList (MVVM).app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ToDoList (MVVM).app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0233192258992400D347CC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		9C02331B2258992400D347CC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		9C02331E2258992400D347CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9C0233202258992500D347CC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9C0233232258992500D347CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9C0233252258992500D347CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -47,6 +48,11 @@
 		9C0233352258992500D347CC /* ToDoList (MVVM)UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ToDoList (MVVM)UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C0233392258992500D347CC /* ToDoList__MVVM_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToDoList__MVVM_UITests.swift; sourceTree = "<group>"; };
 		9C02333B2258992500D347CC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C0233482258994600D347CC /* ToDoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoViewController.swift; sourceTree = "<group>"; };
+		9C02334B2258994600D347CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9C02334D2258994600D347CC /* ToDoItemTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoItemTableViewCell.swift; sourceTree = "<group>"; };
+		9C02334E2258994600D347CC /* ToDoItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToDoItemTableViewCell.xib; sourceTree = "<group>"; };
+		9C0233502258994600D347CC /* ToDoViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToDoViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,9 +103,11 @@
 		9C0233182258992400D347CC /* ToDoList (MVVM) */ = {
 			isa = PBXGroup;
 			children = (
+				9C02334F2258994600D347CC /* ViewModel */,
+				9C02334C2258994600D347CC /* View */,
+				9C0233472258994600D347CC /* Controller */,
+				9C0233492258994600D347CC /* StoryBoard */,
 				9C0233192258992400D347CC /* AppDelegate.swift */,
-				9C02331B2258992400D347CC /* ViewController.swift */,
-				9C02331D2258992400D347CC /* Main.storyboard */,
 				9C0233202258992500D347CC /* Assets.xcassets */,
 				9C0233222258992500D347CC /* LaunchScreen.storyboard */,
 				9C0233252258992500D347CC /* Info.plist */,
@@ -123,6 +131,39 @@
 				9C02333B2258992500D347CC /* Info.plist */,
 			);
 			path = "ToDoList (MVVM)UITests";
+			sourceTree = "<group>";
+		};
+		9C0233472258994600D347CC /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				9C0233482258994600D347CC /* ToDoViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		9C0233492258994600D347CC /* StoryBoard */ = {
+			isa = PBXGroup;
+			children = (
+				9C02334A2258994600D347CC /* Main.storyboard */,
+			);
+			path = StoryBoard;
+			sourceTree = "<group>";
+		};
+		9C02334C2258994600D347CC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9C02334D2258994600D347CC /* ToDoItemTableViewCell.swift */,
+				9C02334E2258994600D347CC /* ToDoItemTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9C02334F2258994600D347CC /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				9C0233502258994600D347CC /* ToDoViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -231,7 +272,8 @@
 			files = (
 				9C0233242258992500D347CC /* LaunchScreen.storyboard in Resources */,
 				9C0233212258992500D347CC /* Assets.xcassets in Resources */,
-				9C02331F2258992400D347CC /* Main.storyboard in Resources */,
+				9C0233542258994700D347CC /* ToDoItemTableViewCell.xib in Resources */,
+				9C0233522258994700D347CC /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +298,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C02331C2258992400D347CC /* ViewController.swift in Sources */,
+				9C0233552258994700D347CC /* ToDoViewModel.swift in Sources */,
+				9C0233512258994700D347CC /* ToDoViewController.swift in Sources */,
+				9C0233532258994700D347CC /* ToDoItemTableViewCell.swift in Sources */,
 				9C02331A2258992400D347CC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -293,20 +337,20 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		9C02331D2258992400D347CC /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				9C02331E2258992400D347CC /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		9C0233222258992500D347CC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				9C0233232258992500D347CC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		9C02334A2258994600D347CC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9C02334B2258994600D347CC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
